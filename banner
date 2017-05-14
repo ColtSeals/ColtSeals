@@ -9,7 +9,7 @@ if [ -f /etc/bannerssh ]
 then
 banner=$(cat /etc/bannerssh)
 else
-banner="N„o h· um banner no momento"
+banner="N√£o h√° um banner no momento"
 fi
 echo -e "\033[1;32mBanner atual\n\n\033[1;37m$banner\n\033[0m"
 echo "Qual banner deseja adicionar (ctrl + c para sair )"
@@ -19,3 +19,4 @@ service ssh restart 1> /dev/null 2>/dev/null
 service sshd restart 1>/dev/null 2>/dev/null
 
 echo "Banner SSH aplicado com sucesso!"
+echo -e "\033[1;31m \033[01;37m"Somos NERDs n√£o perdoamos NUNCA!"\033[0m"
