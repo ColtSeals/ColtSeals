@@ -5,6 +5,14 @@ then
 echo "Execute o script como root"
 exit
 fi
+echo ""
+echo "        BY: @ColtSeals"
+echo "        NERDOLOGIA VPS"
+echo "        NETFREE: FOREVER"
+echo "        Nome: MenuVPS 1.0"
+echo ""
+read -p "De enter para continuar..."
+clear
 echo -e "\033[1;30mInstalando...\033[0m"
 mkdir /etc/VpsPackdir 2>/dev/null
 mkdir /etc/VpsPackdir/limite 2>/dev/null
