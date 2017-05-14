@@ -27,5 +27,5 @@ echo "$bannerssh" > /etc/bannerssh
 service ssh restart 1> /dev/null 2>/dev/null
 service sshd restart 1>/dev/null 2>/dev/null
 
-echo "Banner SSH aplicado com sucesso!"
+echo -e "\033[1;31m \033[01;37m"BANNER SSH aplicado com sucesso!"\033[0m"
 echo -e "\033[1;31m \033[01;37m"Somos NERDs não perdoamos NUNCA!"\033[0m"
