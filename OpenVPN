@@ -101,22 +101,19 @@ if [[ "$IP" = "" ]]; then
 		IP=$(wget -qO- ipv4.icanhazip.com)
 fi
 echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
 echo -e '\033[01;32m              O que deseja fazer ?\033[00;37m'
 echo " "
-echo -e 'Digite: \033[01;32m1\033[00;37m para Instalar o OpenVPN.'
-echo " "
-echo -e 'Digite: \033[01;32m2\033[00;37m para Criar um usuário OpenVPN.'
-echo " "
-echo -e 'Digite: \033[01;32m3\033[00;37m para Deletar um usuário OpenVPN.'
-echo " "
-echo -e 'Digite: \033[01;32m4\033[00;37m para Desinstalar o OpenVPN.'
-echo " "
-echo -e 'Digite: \033[01;32m5\033[00;37m para renovar um usuário OpenVPN.'
-echo " "
+[\033[1;30m1\033[1;33m] Instalar o OpenVPN \033[1;30m(Instalar o OpenVPN)\033[1;33m
+[\033[1;30m2\033[1;33m] Criar um usuário OpenVPN \033[1;30m(Criar um usuário)\033[1;33m
+[\033[1;30m3\033[1;33m] Deletar usuário OpenVPN \033[1;30m(Deletar um usuário)\033[1;33m
+[\033[1;30m4\033[1;33m] Desinstalar o OpenVPN \033[1;30m(Desinstalar)\033[1;33m
+[\033[1;30m5\033[1;33m] Renovar usuário OpenVPN. \033[1;30m(Renovar um usuário.)\033[1;33m
 echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
 echo " "
 echo " "
-read -p "Responda: " -e -i 2 resposta
+read -p "Responda: " -e -i  resposta
 if [[ "$resposta" = '1' ]]; then
 	clear
 	if [[ -e /etc/openvpn/server.conf ]]; then
@@ -399,7 +396,7 @@ elif [[ "$resposta" = '2' ]]; then
 	echo "esta senha não será usada."
     echo "-------------------------------------------"
 	echo " "
-	read -p "Digite a senha para o cliente $CLIENT: " -e -i ColtSeals senha
+	read -p "Digite a senha para o cliente $CLIENT: " -e -i  senha
 	usermod -p $(openssl passwd -1 $senha) $CLIENT
     clear
 	echo "----------------------------------"
