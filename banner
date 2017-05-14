@@ -1,5 +1,17 @@
 #!/bin/bash
-
+echo ""
+VERSION=`lsb_release -sd | cut -c 8-`
+echo Versao do seu sistema operacional: ${VERSION}
+echo ""
+echo "Banner SSH"
+echo ""
+echo "        BY: @ColtSeals"
+echo "        NERDOLOGIA VPS"
+echo "        NETFREE: FOREVER"
+echo "        Nome: MenuVPS 1.0"
+echo ""
+read -p "De enter para continuar..."
+clear
 sshd_config_bak=$(cat /etc/ssh/sshd_config |grep -v "Banner")
 echo "$sshd_config_bak" > /etc/ssh/sshd_config
 echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
