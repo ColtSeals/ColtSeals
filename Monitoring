@@ -3,7 +3,7 @@
 clear
 while true; do
 echo -e "\033[1;37m •••••••••••••••••••••••••••••••••••••••••••••••••••••\033[0m"
-echo -e " \033[47;30m                      MONITORAMENTO                  \033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "MONITORAMENTO SSH" ; tput sgr0
 echo -e "\033[1;37m •••••••••••••••••••••••••••••••••••••••••••••••••••••\033[0m"
 
 echo -e "\033[1;37m •••••••••••••••••••••••••••••••••••••••••••••••••••••\033[0m"
